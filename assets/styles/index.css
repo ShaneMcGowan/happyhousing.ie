@@ -56,42 +56,50 @@ html, body {
 
 .container .container-bars {
   flex: 1 1 0;
-  position: relative;
+  display: flex;
   width: 100%;
-  background-color: aqua;
+  position: relative;
+}
+
+.container .container-bars .container-bars-bg-left {
+  background-color: var(--dark-slate-grey);
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+.container .container-bars .container-bars-bg-right {
+  background-color: var(--alice-blue);
+  flex-grow: 1;
+  flex-basis: 0;
 }
 
 .container .container-bars .funky-section {
   position: absolute;
   height: 100%;
-  width: 100%;
+  transform: skewX(-6deg);
+  width: 21%;
+  filter: blur(0.5px);
+  /* display: none; */
   /* -webkit-clip-path: polygon(0 25px, 100% 0, 100% 100%, 0 calc(100% - 25px)); */
   /* clip-path: polygon(50% 0, 75% 0, 25% 100%, 0 100%); */
 }
 
-.container .container-bars .funky-section.funky-section-start {
-  background-color: var(--dark-slate-grey);
-  width: 100%;
-}
-
 .container .container-bars .funky-section.funky-section-green {
   background-color: var(--medium-spring-green);
-  clip-path: polygon(70% 0, 85% 0, 15% 100%, 0% 100%);
+  left: 20%;
+  /* clip-path: polygon(70% 0, 85% 0, 15% 100%, 0% 100%); */
 }
 
 .container .container-bars .funky-section.funky-section-red {
   background-color: var(--indian-red);
-  clip-path: polygon(85% 0, 95% 0, 25% 100%, 15% 100%);
+  left: 40%;
+  /* clip-path: polygon(85% 0, 95% 0, 25% 100%, 15% 100%); */
 }
 
 .container .container-bars .funky-section.funky-section-yellow {
   background-color: var(--khaki);
-  clip-path: polygon(95% 0, 100% 0, 30% 100%, 25% 100%);
-}
-
-.container .container-bars .funky-section.funky-section-end {
-  background-color: var(--alice-blue);
-  clip-path: polygon(100% 0, 100% 100%, 30% 100%);
+  left: 60%;
+  /* clip-path: polygon(95% 0, 100% 0, 30% 100%, 25% 100%); */
 }
 
 /* Socials container */
