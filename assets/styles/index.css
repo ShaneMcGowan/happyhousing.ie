@@ -150,6 +150,10 @@ html, body {
     margin: 10px;
     height: 120px;
     font-weight: initial;
+    font-size: 24px;
+  }
+  .container .container-logo .text-logo .text-logo-blue {
+    margin-right: 7.5px;
   }
   .container .container-socials {
     justify-content: center;
@@ -164,7 +168,7 @@ html, body {
     margin: 0;
   }
   .container .container-socials .wrapper-socials .social-icon {
-    font-size: 60px;
+    font-size: 30px;
   }
   .container .container-socials .wrapper-socials .social-text {
     display: none;
