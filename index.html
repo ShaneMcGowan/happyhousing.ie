@@ -28,9 +28,86 @@
 
   <!-- Dynamic content -->
   <script>
+
+    const data = [
+      {
+        image: '/assets/images/graphics/010-loupe.svg',
+        text: 'Easy Search'
+      },
+      {
+        image: '/assets/images/graphics/004-verified.svg',
+        text: 'Reach verified landlords'
+      },
+      {
+        image: '/assets/images/graphics/002-high-five.svg',
+        text: 'Build tenant-landlord relationships'
+      },
+      {
+        image: '/assets/images/graphics/005-organize.svg',
+        text: 'Better organisation'
+      },
+      {
+        image: '/assets/images/graphics/003-profiles.svg',
+        text: 'Application ready'
+      },
+      {
+        image: '/assets/images/graphics/006-happy.svg',
+        text: 'Live happy'
+      }
+    ];
+
+    let containerIndex = 0;
+
+
+    function navigateDotLeft() {
+      const dotcontainer = document.getElementById('intro-dot-container');
+      const image = document.getElementById('mobile-intro-image');
+      const text = document.getElementById('mobile-intro-text');
+
+      dotcontainer.childNodes[containerIndex].classList.remove('active');
+      if (containerIndex === 0) {
+        containerIndex = (data.length - 1);
+      } else {
+        containerIndex--;
+      }
+      dotcontainer.childNodes[containerIndex].classList.add('active');
+
+      image.src = data[containerIndex].image;
+      text.innerHTML = data[containerIndex].text;
+    }
+
+    function navigateDotRight() {
+      const dotcontainer = document.getElementById('intro-dot-container');
+      const image = document.getElementById('mobile-intro-image');
+      const text = document.getElementById('mobile-intro-text');
+
+      dotcontainer.childNodes[containerIndex].classList.remove('active');
+      if (containerIndex === (data.length - 1)) {
+        containerIndex = 0;
+      } else {
+        containerIndex++;
+      }
+      dotcontainer.childNodes[containerIndex].classList.add('active');
+
+      image.src = data[containerIndex].image;
+      text.innerHTML = data[containerIndex].text;
+    }
+
     function loadDynamicContent() {
       document.getElementById('footer-year').innerHTML = new Date().getFullYear();
+
+      // introducing container
+      const dots = document.getElementById('intro-dot-container');
+      for (let i = 0; i < data.length; i++) {
+        const dot = document.createElement('div');
+        dot.classList.add('intro-dot');
+        if(i === 0){
+          dot.classList.add('active');
+        }
+        dots.appendChild(dot);
+      }
     }
+
   </script>
 
 </head>
@@ -64,7 +141,7 @@
       <h2>Introducing a smarter way to rent</h2>
     </div>
 
-    <div class="introduction-item-container">
+    <div id="introduction-item-container" class="introduction-item-container">
       <div class="introduction-item">
         <img src="/assets/images/graphics/010-loupe.svg">
         <span>
@@ -103,6 +180,18 @@
       </div>
     </div>
 
+    <div class="introduction-item-container introduction-item-container-mobile">
+      <div class="introduction-item">
+        <img id="mobile-intro-image" src="/assets/images/graphics/010-loupe.svg">
+        <span id="mobile-intro-text">
+          Easy Search
+        </span>
+      </div>
+      <div onclick="navigateDotLeft()" class="introduction-item-caret introduction-item-caret-left">
+        < </div>
+          <div onclick="navigateDotRight()" class="introduction-item-caret introduction-item-caret-right">></div>
+          <div id="intro-dot-container" class="introduction-item-dot-container"></div>
+      </div>
   </section>
 
   <!-- Learn more  -->
