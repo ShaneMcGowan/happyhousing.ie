@@ -3,7 +3,7 @@
 
 <head>
   <!-- Info -->
-  <title>happy housing</title>
+  <title>HappyHousing</title>
   <meta name="description" content="Changing the future of housing rental | Find your happy place #happyhousing">
   <link rel="canonical" href="https://happyhousing.ie/" />
   <meta name="robots" content="index, follow">
@@ -26,38 +26,210 @@
     gtag('config', 'G-JJYFHJF53Y');
   </script>
 
+  <!-- Dynamic content -->
+  <script>
+    function loadDynamicContent() {
+      document.getElementById('footer-year').innerHTML = new Date().getFullYear();
+    }
+  </script>
+
 </head>
 
-<body>
-  <div class="container">
-    <div class="container-logo">
+<body onload="loadDynamicContent()">
+
+  <!-- Header -->
+  <header>
+    <div class="header-logo-container">
       <div class="text-logo">
         <img src="/assets/images/logo.svg" alt="Logo" /> <span class="text-logo-blue">happy</span> housing
       </div>
-      <div class="text-tagline">
+
+    </div>
+    <div class="header-text-container">
+      <h4>
         Website launching soon...
+      </h4>
+    </div>
+    <div class="header-button-container">
+      <button type="button">Subscribe</button>
+      <div>
+        <a href="https://blog.happyhousing.ie">Visit our blog</a>
       </div>
     </div>
-    <div class="container-bars">
-      <div class="container-bars-bg-left"></div>
-      <div class="container-bars-bg-right"></div>
-      <div class="funky-section funky-section-green"></div>
-      <div class="funky-section funky-section-red"></div>
-      <div class="funky-section funky-section-yellow"></div>
+  </header>
+
+  <!-- Introducing a new way to rent  -->
+  <section class="introduction-container">
+    <div class="introduction-header">
+      <h2>Introducing a smarter way to rent</h2>
     </div>
-    <div class="container-socials">
-      <div class="wrapper-socials">
-        <a href="https://www.linkedin.com/company/happyhousing" target="_blank"><i
-            class="social-icon fab fa-fw fa-linkedin"></i> <span class="social-text">happyhousing</span></a>
-        <a href="https://twitter.com/HappyHousingIE" target="_blank"><i class="social-icon fab fa-fw fa-twitter"></i>
-          <span class="social-text">HappyHousingIE</span></a>
-        <a href="https://facebook.com/HappyHousingIE" target="_blank"><i
-            class="social-icon fab fa-fw fa-facebook-f"></i> <span class="social-text">HappyHousingIE</span></a>
-        <a href="https://instagram.com/happyhousingie" target="_blank"><i
-            class="social-icon fab fa-fw fa-instagram"></i> <span class="social-text">happyhousingie</span></a>
+
+    <div class="introduction-item-container">
+      <div class="introduction-item">
+        <img src="/assets/images/graphics/010-loupe.svg">
+        <span>
+          Easy Search
+        </span>
+      </div>
+      <div class="introduction-item">
+        <img src="/assets/images/graphics/004-verified.svg">
+        <span>
+          Reach verified landlords
+        </span>
+      </div>
+      <div class="introduction-item">
+        <img src="/assets/images/graphics/002-high-five.svg">
+        <span>
+          Build tenant-landlord relationships
+        </span>
+      </div>
+      <div class="introduction-item">
+        <img src="/assets/images/graphics/005-organize.svg">
+        <span>
+          Better organisation
+        </span>
+      </div>
+      <div class="introduction-item">
+        <img src="/assets/images/graphics/003-profiles.svg">
+        <span>
+          Application ready
+        </span>
+      </div>
+      <div class="introduction-item">
+        <img src="/assets/images/graphics/006-happy.svg">
+        <span>
+          Live happy
+        </span>
       </div>
     </div>
-  </div>
+
+  </section>
+
+  <!-- Learn more  -->
+  <section class="three-card-container">
+    <div class="card">
+      <div class="card-image">
+        <img src="/assets/images/graphics/012-reading-alt.svg">
+      </div>
+      <span class="card-title">Students</span>
+      <span>Reach verified landlord</span>
+      <a>Coming soon</a>
+    </div>
+
+    <div class="card">
+      <div class="card-image">
+        <img src="/assets/images/graphics/014-landlord-alt.svg">
+      </div>
+      <span class="card-title">Landlords</span>
+      <span>Reach verified landlord</span>
+      <a>Coming soon</a>
+    </div>
+
+    <div class="card">
+      <div class="card-image">
+        <img src="/assets/images/graphics/016-tenant-alt.svg">
+      </div>
+      <span class="card-title">Tenants</span>
+      <span>Reach verified landlord</span>
+      <a>Coming soon</a>
+    </div>
+  </section>
+
+  <!-- Mission statement -->
+  <section class="mission-statement-container">
+    <img class="mission-statement-image" src="/assets/images/graphics/stock-image-1.jpg">
+    <div class="mission-statement-text">
+      <h2>Our Mission</h2>
+      <span>This is a cute story about how we would love to solve the housing crisis. Yay us!</span>
+    </div>
+  </section>
+
+  <!-- Sick as fuh house shaped splitter by shane -->
+  <section class="sick-as-fuh-house-shaped-splitter-by-shane">
+
+  </section>
+
+  <!-- Customer service - Disabled for now -->
+  <section class="customer-service-container" style="display: none;">
+    <h2>Customer Service</h2>
+    <h4>What can we help you with?</h4>
+    <div class="customer-service-inner-container">
+      <div class="customer-service-circle-container">
+        <div class="customer-service-circle circle-yellow">
+        </div>
+        <span>How it works</span>
+      </div>
+
+      <div class="customer-service-circle-container">
+        <div class="customer-service-circle circle-red">
+        </div>
+        <span>RTB</span>
+      </div>
+
+      <div class="customer-service-circle-container">
+        <div class="customer-service-circle circle-blue">
+        </div>
+        <span>Resources</span>
+      </div>
+
+      <div class="customer-service-circle-container">
+        <div class="customer-service-circle circle-green">
+        </div>
+        <span>FAQ</span>
+      </div>
+
+      <div class="customer-service-text-container">
+        <p>Got questions? We got answers. Speak with someone today.</p>
+        <p>Go to customer service ></p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- About Us -->
+  <section class="about-us-container">
+    <section class="about-us-container-left">
+      <h2>Happy Housing</h2>
+      <h2>At Happy Housing we are strong believers of comfort, even in a temporary space.</h2>
+      <p>We recognise the struggle renting in todays economy and we make every effort to support you in your search
+      </p>
+    </section>
+    <section class="about-us-container-right">
+      <h2>Contact Us</h2>
+      <p>
+        Happy Housing Limited<br />
+        71 Baggot street lower,<br />
+        Dublin 2<br />
+        Dublin<br />
+        Ireland<br />
+        D02P593<br />
+      </p>
+      <p>
+        Email: <a href="mailto:support@happyhousing.ie">support@happyhousing.ie</a>
+      </p>
+    </section>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-text-start">
+      Happy Housing Limited © <span class="footer-year" id="footer-year">2021</span>
+    </div>
+    <div class="footer-text-end">
+      All Rights Reserved
+    </div>
+    <div class="footer-icon-container">
+      <a href="https://www.linkedin.com/company/happyhousing" target="_blank"><i
+          class="footer-icon fab fa-fw fa-linkedin"></i></a>
+      <a href="https://twitter.com/HappyHousingIE" target="_blank">
+        <i class="footer-icon fab fa-fw fa-twitter"></i></a>
+      <a href="https://facebook.com/HappyHousingIE" target="_blank">
+        <i class="footer-icon fab fa-fw fa-facebook-f"></i></a>
+      <a href="https://instagram.com/happyhousingie" target="_blank">
+        <i class="footer-icon fab fa-fw fa-instagram"></i></a>
+    </div>
+  </footer>
+
 </body>
 
 </html>
